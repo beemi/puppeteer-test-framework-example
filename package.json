@@ -1,0 +1,30 @@
+{
+  "name": "puppeteer-test-framework-example",
+  "description": "Automation test framework using [puppeter](https://pptr.dev/)",
+  "version": "1.0.0",
+  "main": "automationpractice.js",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "puppeteer": "^10.0.0",
+    "puppeteer-core": "^10.0.0"
+  },
+  "devDependencies": {
+    "faker": "^5.5.3"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beemi/puppeteer-test-framework-example.git"
+  },
+  "author": {
+    "name": "Raj Beemi",
+    "email": "beemi.raja@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beemi/puppeteer-test-framework-example/issues"
+  },
+  "homepage": "https://github.com/beemi/puppeteer-test-framework-example#readme"
+}

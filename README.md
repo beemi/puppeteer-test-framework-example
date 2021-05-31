@@ -1,2 +1,6 @@
 # puppeteer-test-framework-example
-Puppeteer Automation test framework skeleton 
+
+Automation test framework using [puppeter](https://pptr.dev/)
+
+## Contact
+[beemi.raja@gmail.com](beemi.raja@gmail.com)
