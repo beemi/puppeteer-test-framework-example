@@ -84,8 +84,14 @@ class CreateAnAccountPage {
         await page.type("#alias","My Home Test")
     }
 
-    async ClickOnRegister() {
-
+    /**
+     * Click on Register button.
+     * @param page
+     * @returns {Promise<void>}
+     * @constructor
+     */
+    async ClickOnRegister(page) {
+        await page.click("button[id='submitAccount'] span")
     }
 
 
