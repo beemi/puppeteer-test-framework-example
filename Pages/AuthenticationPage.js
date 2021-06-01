@@ -14,7 +14,6 @@ class AuthenticationPage {
             visible: true
         });
         console.log("Create an account page option has been displayed")
-        // Enter Email address
         await page.type("#email_create", email);
     }
 
