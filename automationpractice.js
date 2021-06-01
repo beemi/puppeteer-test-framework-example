@@ -40,10 +40,12 @@ let email, firstName, lastName, password, company, address, city, state, zipcode
     lastName =faker.name.lastName();
     await page.type("#customer_lastname",lastName);
     // Email
-    await page.type("#email",email);
+    const element = await page.$("#email");
+    const hasEmail = await (await element.getProperty('innerText')).jsonValue();
+    // let hasEmail = await page.$eval('#email', (el) => el.textContent);
+    // let hasEmail = await page.evaluate(el=>el.value,"#email");
+    expect(hasEmail, "Email input prePopulated with email address").eql(email);
     // password
-    await page.type("#passwd", "Test@12345")
-
-
+    await page.type("#passwd", "Test@12345");
     // await browser.close();
 })();

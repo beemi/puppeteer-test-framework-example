@@ -4,15 +4,17 @@
   "version": "1.0.0",
   "main": "automationpractice.js",
   "dependencies": {
+    "@small-tech/required": "^1.0.3",
     "chai": "^4.3.4",
     "puppeteer": "^10.0.0",
     "puppeteer-core": "^10.0.0"
   },
   "devDependencies": {
-    "faker": "^5.5.3"
+    "faker": "^5.5.3",
+    "mocha": "^8.4.0"
   },
   "scripts": {
-    "test": ""
+    "test": "node ./node_modules/mocha/bin/mocha --timeout=30000 ./Tests/Registration.test.js"
   },
   "repository": {
     "type": "git",
