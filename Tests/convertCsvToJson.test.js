@@ -1,11 +1,8 @@
-const TestUtil = require('./TestUtils')
 const path = require('path');
 const expect = require("chai").expect;
 let csvToJson = require('convert-csv-to-json');
 const csvtojsonV2 = require("csvtojson")
 let csvFilePath = path.resolve('Tests', 'test.csv')
-
-const testUtil = new TestUtil()
 
 describe('csv', function () {
 
