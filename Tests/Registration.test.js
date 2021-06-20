@@ -11,21 +11,19 @@ const homePage = new HomePage();
 const authenticationPage = new AuthenticationPage();
 const createAnAccountPage = new CreateAnAccountPage();
 
+let browser;
+let page;
+
 let email, firstName, lastName, password, company, address, address2, city, state, zipcode, mobileNumber;
 
 describe('Customer should be able tp register', function () {
-
-    let browser;
-    let page;
-
-    // before hook
     before(async () => {
         browser = await puppeteer.launch({
+            slowMo: 20,
             headless: false,
             defaultViewport: null
         });
         page = await browser.newPage()
-        // await page.setViewport({width: 1366, height: 768});
         await page.goto('http://automationpractice.com/index.php');
     });
 
@@ -54,7 +52,7 @@ describe('Customer should be able tp register', function () {
         await createAnAccountPage.EnterPersonalInformation(page, "Mr", firstName, lastName, password,
             "10/5/1987");
         // Enter address details
-        await createAnAccountPage.EnterYourAddress(page,company,address,address2,city,state,zipcode,mobileNumber);
+        await createAnAccountPage.EnterYourAddress(page, company, address, address2, city, "Alabama", "36104", "+1 800 444 4444");
 
 
     });

@@ -15,12 +15,15 @@ describe('csv', function () {
         const csvFileData = __dirname + "/test.csv"
         csvtojsonV2()
             .fromFile(csvFileData)
-            .then(function (res){
+            .then(function (res) {
+                // TODO: play with JSON response
                 console.log(res)
+                console.log('Number of objects:', res.length)
                 done();
-            }, function (err){
+            }, function (err) {
                 expect(err).to.be.undefined;
                 done();
             })
+
     });
 })

@@ -1,4 +1,3 @@
-const puppeteer = require('puppeteer');
 const required = require('@small-tech/required')
 
 class CreateAnAccountPage {
@@ -43,9 +42,9 @@ class CreateAnAccountPage {
         await page.type("#passwd", password);
         // DOB
         const dob = dateOfBirth.split("/");
-        await page.select("#days",dob[0]);
-        await page.select("#months",dob[1]);
-        await page.select("#years",dob[2]);
+        await page.select("#days", dob[0]);
+        await page.select("#months", dob[1]);
+        await page.select("#years", dob[2]);
         // Sign up newsletter
         await page.click("#newsletter");
         // offers
@@ -79,9 +78,11 @@ class CreateAnAccountPage {
         await page.type("#address2", address2);
         await page.type("#city", city);
         await page.select("#id_state", state);
-        await page.select("#postcode", zipCode);
-        await page.select("#phone_mobile", mobileNumber);
-        await page.type("#alias","My Home Test")
+        await page.type("#postcode", zipCode);
+        await page.type("#phone_mobile", mobileNumber);
+        const aliasElement = page.$('#alias');
+        await aliasElement.click({clickCount: 3});
+        await aliasElement.type("My Home Test")
     }
 
     /**
